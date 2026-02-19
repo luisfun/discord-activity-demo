@@ -7,11 +7,11 @@ type Bindings = {
 
 const app = new Hono<{ Bindings: Bindings }>()
 
-app.get('/', c => {
+app.get('/api', c => {
   return c.text('Hello Hono!')
 })
 
-app.post('/token', async c => {
+app.post('/api/token', async c => {
   const code = await c.req
     .json()
     .then(({ code }) => {

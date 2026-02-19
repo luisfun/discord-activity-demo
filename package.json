@@ -5,7 +5,7 @@
   "scripts": {
     "fix": "biome check --write .",
     "fix:unsafe": "biome check --write --unsafe .",
-    "build": "vite build --root client",
+    "build": "vite build",
     "preview": "npm run build && wrangler dev",
     "register": "tsc && node --env-file=.env dist/register.js",
     "deploy": "npm run build && wrangler deploy --minify",
@@ -18,14 +18,15 @@
     "hono": "^4.11.9",
     "hono-party": "^1.0.0",
     "partyserver": "^0.1.5",
-    "phaser": "^3.90.0"
+    "phaser": "^4.0.0-rc.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.2",
+    "@tsconfig/strictest": "^2.0.8",
     "@types/node": "^25.2.3",
     "discord-api-types": "^0.38.39",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1",
+    "typescript": "^6.0.0-beta",
+    "vite": "^8.0.0-beta.14",
     "wrangler": "^4.66.0"
   }
 }
